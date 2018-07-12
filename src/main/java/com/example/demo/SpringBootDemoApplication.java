@@ -4,12 +4,14 @@ import org.springframework.boot.Banner.Mode;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 import com.example.demo.listener.AppListener;
 
 @SpringBootApplication
+@EnableCaching // 开启缓存，需要显示的指定
 public class SpringBootDemoApplication {
 
 	@Bean
