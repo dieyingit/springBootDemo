@@ -7,6 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.email.EmailService;
+import com.example.demo.util.ApplicationUtil;
+import com.hazelcast.core.HazelcastInstance;
+import com.hazelcast.core.IMap;
 
 /**
  * If you need to run some specific code once the SpringApplicationhas started,
