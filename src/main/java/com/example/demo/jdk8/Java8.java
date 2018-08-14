@@ -1,10 +1,20 @@
-package com.example.demo;
+package com.example.demo.jdk8;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+
+import com.example.demo.entity.User;
 
 public class Java8 {
 	public static void main(String[] args) {
+		// Java 5 开始就引入了泛型方法
+		List<String> testList = Collections.emptyList();
+		// 在 Java 7 中，可以在表达式中省略类型参数，只要这些参数能通过上下文确定
+		Map<User, List<String>> userChannels = new HashMap<>();
 		// 1.Lambda表达式
 		Arrays.asList("a", "b", "d").forEach(e -> System.out.println(e));
 		int totaAge = 0;
