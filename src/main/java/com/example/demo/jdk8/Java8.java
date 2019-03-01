@@ -39,6 +39,12 @@ public class Java8 {
 		System.out.println("Full Name is set? " + fullName.isPresent());
 		System.out.println("Full Name: " + fullName.orElseGet(() -> "[none]"));
 		System.out.println(fullName.map(s -> "Hey " + s + "!").orElse("Hey Stranger!"));
+
+		Persion p = new Persion("xxxx", 17);
+		Optional<Persion> op = Optional.ofNullable(p);
+		System.out.println("Full Name is set? " + op.isPresent());
+		System.out.println("Full Name: " + op.orElseGet(null));
+		System.out.println(op.map(Persion::getName).map(String::toUpperCase).orElse("Hey Stranger!"));
 	}
 }
 
